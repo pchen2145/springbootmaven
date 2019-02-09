@@ -42,8 +42,7 @@
         </activation>
             <properties>
 <!-- Optional URL to server. Default value is http://localhost:9000 -->
-            <sonar.host.url>
-            </sonar.host.url>
+            <sonar.host.url>http://localhost:9000</sonar.host.url>
             </properties>
         </profile>
     </profiles>
@@ -58,6 +57,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.0.2</version>
             </plugin>
         </plugins>
     </build>
