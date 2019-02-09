@@ -36,6 +36,8 @@
             <sonar.host.url>https://sonarcloud.io</sonar.host.url>
             <sonar.projectKey>pchen2145_springbootmaven</sonar.projectKey>
             <sonar.organization>pchen2145-github</sonar.organization>
+            <sonar.login>admin</sonar.login>
+            <sonar.password>admin</sonar.password>
           </properties>
         </profile>
     </profiles>
