@@ -34,16 +34,18 @@
         </dependency>
     </dependencies>
 
-    <profile>
-      <id>sonar</id>
-      <properties>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.projectKey>pchen2145_springbootmaven</sonar.projectKey>
-        <sonar.organization>pchen2145-github</sonar.organization>
-        <sonar.login>f38f076a0c4a615b06f58ea225b115574cbb2a89</sonar.login>
-      </properties>
-    </profile>
-
+    <profiles>
+        <profile>
+          <id>sonar</id>
+          <properties>
+            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+            <sonar.projectKey>pchen2145_springbootmaven</sonar.projectKey>
+            <sonar.organization>pchen2145-github</sonar.organization>
+            <sonar.login>f38f076a0c4a615b06f58ea225b115574cbb2a89</sonar.login>
+          </properties>
+        </profile>
+    </profiles>
+    
     <properties>
         <java.version>1.8</java.version>
     </properties>
