@@ -35,8 +35,8 @@
         </dependency>
     </dependencies>
 
-    <activeProfiles>
-        <activeProfile>
+    <profiles>
+        <profile>
           <id>sonar</id>
           <properties>
             <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -45,8 +45,8 @@
             <sonar.login>f22edcff58f772c3eae0d34b3b9761d1d818dc3e</sonar.login>
             <sonar.password>admin</sonar.password>
           </properties>
-        </activeProfile>
-    </activeProfiles>
+        </profile>
+    </profiles>
 
     <properties>
         <java.version>1.8</java.version>
