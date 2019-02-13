@@ -5,12 +5,16 @@
 
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot</artifactId>
-    <version>0.1.0</version>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>Hello World</name>
+    <description>Running lightweight application using springboot framework</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>2.1.2.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -18,19 +22,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
+    <activeProfiles>
+        <activeProfile>
           <id>sonar</id>
           <properties>
             <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -39,13 +45,12 @@
             <sonar.login>f22edcff58f772c3eae0d34b3b9761d1d818dc3e</sonar.login>
             <sonar.password>admin</sonar.password>
           </properties>
-        </profile>
-    </profiles>
+        </activeProfile>
+    </activeProfiles>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
 
     <build>
         <plugins>
@@ -53,41 +58,42 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.3.0.603</version>
             </plugin>
 
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.2</version>
-          <configuration>
-            <append>true</append>
-          </configuration>
-          <executions>
-            <execution>
-              <id>prepare-agent</id>
-              <goals>
-                <goal>prepare-agent</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>prepare-agent-integration</id>
-              <goals>
-                <goal>prepare-agent-integration</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>jacoco-site</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>report</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
+            <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <version>0.8.2</version>
+              <configuration>
+                <append>true</append>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>prepare-agent</id>
+                  <goals>
+                    <goal>prepare-agent</goal>
+                  </goals>
+                </execution>
+                <execution>
+                  <id>prepare-agent-integration</id>
+                  <goals>
+                    <goal>prepare-agent-integration</goal>
+                  </goals>
+                </execution>
+                <execution>
+                  <id>jacoco-site</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>report</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
 
         </plugins>
     </build>
