@@ -2,10 +2,10 @@ FROM anapsix/alpine-java
 
 MAINTAINER pchen2145
 
-COPY ./target/gs-spring-boot-0.1.0.jar /springboot/
+COPY ./target/gs-spring-boot-0.0.1.jar /springboot/
 WORKDIR /springboot
 
-EXPOSE 8080
+EXPOSE 8080 
 
 # CMD ["java","-jar","gs-spring-boot-0.1.0.jar"]
 
