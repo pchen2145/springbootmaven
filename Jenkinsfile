@@ -26,7 +26,7 @@ node {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build Docker Image with Application') {
             docker.build("pchen2145/springbootimage:${imagetag}", "-f Dockerfile .")
             sh "docker tag pchen2145/springbootimage:${imagetag} pchen2145/springbootimage:latest"
         }
